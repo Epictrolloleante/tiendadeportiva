@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../css/ComponenteLogin.css';
 import { Link } from 'react-router-dom';
+ {/* Comentario */}
 
 export default function login() {
     
