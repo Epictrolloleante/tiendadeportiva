@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '../css/ComponenteLogin.css';
+import { Link } from 'react-router-dom';
 
 export default function login() {
     
@@ -28,7 +29,7 @@ export default function login() {
                             
                         </div>
                         <div>
-                            <button>Entrar</button>
+                            <Link to="/"><button >Entrar</button></Link>
                         </div>
                     
                 </div>
