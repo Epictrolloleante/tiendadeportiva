@@ -16,7 +16,7 @@ export default function login() {
             <div class="menu">
                 <p>Inicio de Sesión "El ñon"</p>
                 <div class="opc-menu">
-                    <p>Inicio</p>
+                    <Link to={"/"}><p>Inicio</p></Link>
                     <p>Registro</p>
                     <p>Carrito</p>
                 </div>
@@ -25,7 +25,7 @@ export default function login() {
             <div class="contenedor">
                 <div class="google">
                     <p>Iniciar sesión con google</p>
-                    <img></img>
+                    <button></button>
                 </div>
 
                 <hr width="0" size="500" color="black"></hr>
@@ -38,7 +38,7 @@ export default function login() {
                         <p>Contraseña</p>
                         <input type="password" class="campo" placeholder="Ingresa Contraseña"></input>
                     </div>
-                    <button>Entrar</button>
+                    <Link to={"/"}> <button>Entrar</button></Link>
                 </div>
             </div>
 
