@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../css/ComponenteLogin.css';
 import { Link } from 'react-router-dom';
+import ComponenteLayout from './ComponenteLayout'
  {/* Comentario */}
 
 export default function login() {
@@ -10,17 +11,10 @@ export default function login() {
 
 
 
-
+        <ComponenteLayout>
         <div class="principal">
 
-            <div class="menu">
-                <p>Inicio de Sesión "El ñon"</p>
-                <div class="opc-menu">
-                    <Link to={"/"}><p>Inicio</p></Link>
-                    <p>Registro</p>
-                    <p>Carrito</p>
-                </div>
-            </div>
+            
 
             <div class="contenedor">
                 <div class="google">
@@ -43,6 +37,7 @@ export default function login() {
             </div>
 
         </div>
+        </ComponenteLayout>
 
 
 
