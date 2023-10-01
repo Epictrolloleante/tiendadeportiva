@@ -1,48 +1,39 @@
 import React from 'react'
 import styles from '../css/ComponenteLogin.css';
 import { Link } from 'react-router-dom';
- {/* Comentario */}
+import ComponenteLayout from './ComponenteLayout'
+{/* Comentario */ }
 
 export default function login() {
 
     return (
+        <ComponenteLayout Titulo="Inicio de sesion">
+            <div class="principal">
 
 
 
-
-
-        <div class="principal">
-
-            <div class="menu">
-                <p>Inicio de Sesión "El ñon"</p>
-                <div class="opc-menu">
-                    <Link to={"/"}><p>Inicio</p></Link>
-                    <p>Registro</p>
-                    <p>Carrito</p>
-                </div>
-            </div>
-
-            <div class="contenedor">
-                <div class="google">
-                    <p>Iniciar sesión con google</p>
-                    <button></button>
-                </div>
-
-                <hr width="0" size="500" color="black"></hr>
-
-                <div class="iniciar">
-                    <p>Login</p>
-                    <div class="datosIniciar">
-                        <p>Usuario</p>
-                        <input type="text" class="campo" placeholder="Ingresa Usuario"></input>
-                        <p>Contraseña</p>
-                        <input type="password" class="campo" placeholder="Ingresa Contraseña"></input>
+                <div class="contenedor">
+                    <div class="google">
+                        <p>Iniciar sesión con google</p>
+                        <button></button>
                     </div>
-                    <Link to={"/"}> <button>Entrar</button></Link>
-                </div>
-            </div>
 
-        </div>
+                    <hr width="0" size="500" color="black"></hr>
+
+                    <div class="iniciar">
+                        <p>Login</p>
+                        <div class="datosIniciar">
+                            <p>Usuario</p>
+                            <input type="text" class="campo" placeholder="Ingresa Usuario"></input>
+                            <p>Contraseña</p>
+                            <input type="password" class="campo" placeholder="Ingresa Contraseña"></input>
+                        </div>
+                        <Link to={"/"}> <button>Entrar</button></Link>
+                    </div>
+                </div>
+
+            </div>
+        </ComponenteLayout>
 
 
 

@@ -1,0 +1,39 @@
+#principal {
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    height: 100%;
+}
+
+Header{
+    display: flex;
+    height: 15%;
+    width: 100%;
+}
+
+.container{
+    height: 70%;
+    width: 100%;
+    display: flex;
+
+}
+
+#footer{
+    height: 14%;
+    width: 100%;
+}
+
+#lateral{
+    
+    width: 30%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    padding: 1px;
+    border: 1px solid black;
+}

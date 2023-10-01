@@ -17,8 +17,12 @@ function App() {
 
     <Routes>
       <Route path="/login" element={<ComponenteLogin />}>   </Route>
+<<<<<<< HEAD
       <Route path="/MenuPrincipal" element={<MenuPrincipal />}>   </Route>
       <Route path='/apartadoHombres' element={<ComponenteHombre/>}></Route>
+=======
+      <Route path="/" element={<MenuPrincipal />}>   </Route>
+>>>>>>> 4ef570d7df68c52fae00e00ca45e762429891ff4
       
     </Routes>
   </BrowserRouter>
