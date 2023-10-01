@@ -14,7 +14,7 @@ import imgInfantil from '../img/menuprincipal/infantil1.png';
 export default function MenuPrincipal() {
   return (
     <div class="principal">
-           <div class="contenedor">
+           <div class="contenedorP">
              <div class="card">
              <img src={imgGuantes} alt="Imagen de guantes" />
              <br />
@@ -36,7 +36,7 @@ export default function MenuPrincipal() {
 
            <br />
 
-           <div class="contenedor">
+           <div class="contenedorP">
              <div class="card">
              <img src={imgHombre} alt="Imagen de guantes" />
              <br />
@@ -58,7 +58,7 @@ export default function MenuPrincipal() {
 
               <br />
 
-           <div class="contenedor">
+           <div class="contenedorP">
              <div class="card">
              <img src={imgPortero} alt="Imagen de guantes" />
              <br />
