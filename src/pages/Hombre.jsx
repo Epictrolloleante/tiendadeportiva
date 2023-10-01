@@ -5,9 +5,11 @@ import stylees from '../css/Hombres.css'
 import imgSelecciones from '../img/Masculino/seleccion.jpg';
 import imgInternacional from '../img/Masculino/internacional.png';
 import imgNacional from '../img/Masculino/nacional.jpg';
+import ComponenteLayout from './ComponenteLayout';
 export default function 
 () {
   return (
+    <ComponenteLayout Titulo="Home">
     <div >
         <div class="contenedorH">
             <div class="card">
@@ -69,5 +71,6 @@ export default function
         </div>
 
     </div>
+    </ComponenteLayout>
   )
 }
