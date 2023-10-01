@@ -11,7 +11,7 @@ function Layout(props) {
     <div id="principal">
       <Header id="barraMenu" Titulo={props.Titulo}/>
       <div className="container">
-        <Sidebar id="lateral" />
+       {/* <Sidebar id="lateral" /> */}
         <main id="main">{props.children}</main>
       </div>
       <Footer id="footer" />

@@ -10,9 +10,11 @@ import imgCalzado from '../img/menuprincipal/calzado1.png';
 import imgHombre from '../img/menuprincipal/hombre1.png';
 import imgFemenil from '../img/menuprincipal/femenil_1.png';
 import imgInfantil from '../img/menuprincipal/infantil1.png';
+import ComponenteLayout from './ComponenteLayout';
 
 export default function MenuPrincipal() {
   return (
+    <ComponenteLayout Titulo="Home">
     <div class="principal">
            <div class="contenedor">
              <div class="card">
@@ -80,7 +82,7 @@ export default function MenuPrincipal() {
 
         </div>
         
-       
+        </ComponenteLayout> 
   )
 }
 

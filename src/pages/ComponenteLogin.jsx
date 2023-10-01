@@ -7,7 +7,7 @@ import ComponenteLayout from './ComponenteLayout'
 export default function login() {
 
     return (
-        <ComponenteLayout Titulo="Inicio de Sesion">
+        <ComponenteLayout Titulo="Inicio de sesion">
             <div class="principal">
 
 

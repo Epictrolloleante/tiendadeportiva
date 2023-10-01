@@ -1,4 +1,9 @@
 #container{
+    display: flex;
     height: 100%;
-    border: 1px solid black;
+    background-color: #393d3f;
+    color: #FFFFFF;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
