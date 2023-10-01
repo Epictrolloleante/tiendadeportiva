@@ -2,41 +2,37 @@ import React from 'react'
 import styles from '../css/ComponenteLogin.css';
 import { Link } from 'react-router-dom';
 import ComponenteLayout from './ComponenteLayout'
- {/* Comentario */}
+{/* Comentario */ }
 
 export default function login() {
 
     return (
-
-
-
-
         <ComponenteLayout>
-        <div class="principal">
+            <div class="principal">
 
-            
 
-            <div class="contenedor">
-                <div class="google">
-                    <p>Iniciar sesión con google</p>
-                    <button></button>
-                </div>
 
-                <hr width="0" size="500" color="black"></hr>
-
-                <div class="iniciar">
-                    <p>Login</p>
-                    <div class="datosIniciar">
-                        <p>Usuario</p>
-                        <input type="text" class="campo" placeholder="Ingresa Usuario"></input>
-                        <p>Contraseña</p>
-                        <input type="password" class="campo" placeholder="Ingresa Contraseña"></input>
+                <div class="contenedor">
+                    <div class="google">
+                        <p>Iniciar sesión con google</p>
+                        <button></button>
                     </div>
-                    <Link to={"/"}> <button>Entrar</button></Link>
-                </div>
-            </div>
 
-        </div>
+                    <hr width="0" size="500" color="black"></hr>
+
+                    <div class="iniciar">
+                        <p>Login</p>
+                        <div class="datosIniciar">
+                            <p>Usuario</p>
+                            <input type="text" class="campo" placeholder="Ingresa Usuario"></input>
+                            <p>Contraseña</p>
+                            <input type="password" class="campo" placeholder="Ingresa Contraseña"></input>
+                        </div>
+                        <Link to={"/"}> <button>Entrar</button></Link>
+                    </div>
+                </div>
+
+            </div>
         </ComponenteLayout>
 
 
