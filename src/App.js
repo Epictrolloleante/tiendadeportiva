@@ -8,6 +8,7 @@ import MenuPrincipal from './pages/MenuPrincipal';
 import ComponenteHome from './pages/ComponenteHome';
 import ComponentePaginaTest from './pages/ComponentePaginaTest'; 
 import ComponenteHombre from './pages/Hombre'; 
+import Pruebas from './pages/pruebas'
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -20,7 +21,7 @@ function App() {
       
       <Route path="/MenuPrincipal" element={<MenuPrincipal />}>   </Route>
       <Route path='/apartadoHombres' element={<ComponenteHombre/>}></Route>
-
+      <Route path="/pruebas" element={<Pruebas />}>   </Route>
       <Route path="/" element={<MenuPrincipal />}>   </Route>
 
       
