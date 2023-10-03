@@ -2,14 +2,14 @@
     display: grid;
     grid-template-columns: 1fr; /* Una columna */
     align-items: center; /* Esto alinea verticalmente los elementos */
-    background: #62929E;
+    background: #ccc;
 }
 
 .contenedorP{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #62929E;
+    background: #ccc;
     
 }
 

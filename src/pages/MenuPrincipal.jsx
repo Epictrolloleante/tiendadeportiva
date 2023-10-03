@@ -14,8 +14,11 @@ import ComponenteLayout from './ComponenteLayout';
 
 export default function MenuPrincipal() {
   return (
+    
     <ComponenteLayout Titulo="Home">
+    
     <div class="principal">
+            
            <div class="contenedorP">
              <div class="card">
              <img src={imgGuantes} alt="Imagen de guantes" />
