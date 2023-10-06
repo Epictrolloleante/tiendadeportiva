@@ -14,78 +14,129 @@ import ComponenteLayout from './ComponenteLayout';
 
 export default function MenuPrincipal() {
   return (
-    
+
     <ComponenteLayout Titulo="Home">
-    
-    <div class="principal">
-            
-           <div class="contenedorP">
-             <div class="card">
-             <img src={imgGuantes} alt="Imagen de guantes" />
-             <br />
-             <button>Guantes</button>
-             </div>
 
-             <div class="card">
-             <img src={imgPlayeras} alt="Imagen de Playeras" />
-             <br />
-             <button>Playeras</button>
-             </div>
-            
-             <div class="card">
-             <img src={imgTacos} alt="Imagen de Playeras" />
-             <br />
-             <button>Tacos De Futbol</button>
-             </div>
-           </div>
+      <div class="principal">
 
-           <br />
+        <div class="contenedorP">
 
-           <div class="contenedorP">
-             <div class="card">
-             <img src={imgHombre} alt="Imagen de guantes" />
-             <br />
-             <button>Hombres</button>
-             </div>
-
-             <div class="card">
-             <img src={imgFemenil} alt="Imagen de Playeras" />
-             <br />
-             <button>Femenil</button>
-             </div>
-            
-             <div class="card">
-             <img src={imgInfantil} alt="Imagen de Playeras" />
-             <br />
-             <button>Infantil</button>
-             </div>
-           </div>
-
+          <div class="cont">
+            <div class="bottom"></div>
+            <div class="card">
+              <img src={imgGuantes} alt="Imagen de guantes" />
               <br />
+              <button>Guantes</button>
+            </div>
+            <div class="left"></div>
+            <div class="front"></div>
+          </div>
 
-           <div class="contenedorP">
-             <div class="card">
-             <img src={imgPortero} alt="Imagen de guantes" />
-             <br />
-             <button>Uniforme de Portero</button>
-             </div>
+          <div class="cont">
+            <div class="bottom"></div>
+            <div class="card">
+              <img src={imgPlayeras} alt="Imagen de Playeras" />
+              <br />
+              <button>Playeras</button>
+            </div>
+            <div class="left"></div>
+            <div class="front"></div>
+          </div>
 
-             <div class="card">
-             <img src={imgCalzado} alt="Imagen de Playeras" />
-             <br />
-             <button>Calzado</button>
-             </div>
-            
-             <div class="card">
-             <img src={imgBalon} alt="Imagen de Playeras" />
-             <br />
-             <button>Balones</button>
-             </div>
-           </div>
+          <div class="cont">
+            <div class="bottom"></div>
+            <div class="card">
+              <img src={imgTacos} alt="Imagen de Playeras" />
+              <br />
+              <button>Tacos De Futbol</button>
+            </div>
+            <div class="left"></div>
+            <div class="front"></div>
+          </div>
 
         </div>
-        
-        </ComponenteLayout> 
+
+        <br />
+
+        <div class="contenedorP">
+
+          <div class="cont">
+            <div class="bottom"></div>
+            <div class="card">
+              <img src={imgHombre} alt="Imagen de guantes" />
+              <br />
+              <button>Hombres</button>
+            </div>
+            <div class="left"></div>
+            <div class="front"></div>
+          </div>
+
+          <div class="cont">
+            <div class="bottom"></div>
+            <div class="card">
+              <img src={imgFemenil} alt="Imagen de Playeras" />
+              <br />
+              <button>Femenil</button>
+            </div>
+            <div class="left"></div>
+            <div class="front"></div>
+          </div>
+
+          <div class="cont">
+            <div class="bottom"></div>
+            <div class="card">
+              <img src={imgInfantil} alt="Imagen de Playeras" />
+              <br />
+              <button>Infantil</button>
+            </div>
+            <div class="left"></div>
+            <div class="front"></div>
+          </div>
+
+        </div>
+
+        <br />
+
+        <div class="contenedorP">
+
+          <div class="cont">
+            <div class="bottom"></div>
+            <div class="card">
+              <img src={imgPortero} alt="Imagen de guantes" />
+              <br />
+              <button>Uniforme de Portero</button>
+            </div>
+            <div class="left"></div>
+            <div class="front"></div>
+          </div>
+
+          <div class="cont">
+            <div class="bottom"></div>
+            <div class="card">
+              <img src={imgCalzado} alt="Imagen de Playeras" />
+              <br />
+              <button>Calzado</button>
+            </div>
+            <div class="left"></div>
+            <div class="front"></div>
+          </div>
+
+          <div class="cont">
+            <div class="bottom"></div>
+            <div class="card">
+              <img src={imgBalon} alt="Imagen de Playeras" />
+              <br />
+              <button>Balones</button>
+            </div>
+            <div class="left"></div>
+            <div class="front"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </ComponenteLayout>
   )
 }
 
