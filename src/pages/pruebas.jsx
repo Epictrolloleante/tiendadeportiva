@@ -1,4 +1,6 @@
 import React from 'react'
+import Auth from './auth';
+{/*
 function register() {
   const data = {
     name: 'John Doe',
@@ -24,8 +26,8 @@ function register() {
       // Maneja errores aquí (por ejemplo, muestra un mensaje de error)
       console.error('Error en el registro', error);
     });
-}
-
+}*/}
+{/*
 function login() {
   const data = {
     name: 'John Doe',
@@ -51,15 +53,21 @@ function login() {
       // Maneja errores aquí (por ejemplo, muestra un mensaje de error)
       console.error('Error en el registro', error);
     });
-}
-export default function fsdfsdf() {
-  return (
+}*/}
+
+function pagina(){
+  if(Auth()) {
+    console.log(Auth());
+  return(
     <div>
-      {register()}
-
-
+      <h1>ESTA AUTENTICADO</h1>
     </div>
-
-
-  )
+  );
+}else{
+  alert("Esta pagina solo puede ser accesada si esta logeado");
+  window.location.href = '/';
 }
+}
+
+export default pagina;
+

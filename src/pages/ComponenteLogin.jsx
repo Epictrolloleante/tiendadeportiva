@@ -50,6 +50,9 @@ export default function Login() {
           // Redirige al usuario a la página de inicio, por ejemplo.
           // Reemplaza '/inicio' con la ruta deseada.
           window.location.href = '/';
+          const token = data['access_token'] // Obten el token de la respuesta
+          localStorage.setItem('token', token);
+          console.log(token);
         } else {
           // Muestra un mensaje de error si el inicio de sesión falló
           alert('Inicio de sesión fallido. Verifica tus credenciales.');
