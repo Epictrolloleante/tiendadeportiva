@@ -14,7 +14,7 @@ export default function ComponenteRegistro() {
                         <p>Nombre:</p> <input type='text' placeholder='Introduce tu nombre'></input> <p>Celular:</p> <input type='tel' placeholder='Introduce tu celular'></input>
                         <p>Apellido Paterno:</p> <input type='text' placeholder='Introduce tu apellido paterno'></input> <p>Correo:</p> <input type='email' placeholder='Introduce tu correo'></input>
                         <p>Apellido Materno:</p> <input type='text' placeholder='Introduce tu apellido materno'></input> <p>Usuario:</p> <input type='text' placeholder='Introduce un usuario'></input>
-                        <p>Dirección:</p> <input type='text' placeholder='Introduce tu dirección'></input> <p>Contraseña:</p> <input type='password' placeholder='Introduce una contraseña'></input>
+                        <p>Contraseña:</p> <input type='password' placeholder='Introduce una contraseña'></input>
                     </div>
                     <button>Registrar</button>
                 </div>

@@ -6,6 +6,7 @@ import ComponenteLogin from './pages/ComponenteLogin';
 import MenuPrincipal from './pages/MenuPrincipal';
 
 import ComponenteRegistro from './pages/ComponenteRegistro';
+import ComponenteDireccion from './pages/ComponenteDireccion';
 
 import ComponenteHome from './pages/ComponenteHome';
 import ComponentePaginaTest from './pages/ComponentePaginaTest'; 
@@ -22,6 +23,7 @@ function App() {
       <Route path="/login" element={<ComponenteLogin />}>   </Route>
 
       <Route path='/Registro' element={<ComponenteRegistro/>}></Route>
+      <Route path='/Direccion' element={<ComponenteDireccion/>}></Route>
       
       <Route path="/MenuPrincipal" element={<MenuPrincipal />}>   </Route>
       <Route path='/apartadoHombres' element={<ComponenteHombre/>}></Route>
