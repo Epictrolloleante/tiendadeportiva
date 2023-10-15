@@ -61,6 +61,7 @@ export default function Login() {
       .catch((error) => {
         // Maneja errores aquí (por ejemplo, muestra un mensaje de error)
         console.error('Error en la solicitud:', error);
+        alert('Inicio de sesión fallido. Verifica tus credenciales.');alert('Inicio de sesión fallido. Verifica tus credenciales.');
       });
   };
 
