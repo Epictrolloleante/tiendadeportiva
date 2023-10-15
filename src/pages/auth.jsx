@@ -16,23 +16,16 @@ const checkAuthorization = () => {
   })
     .then((response) => response.text())
     .then((text) => {
-      // Maneja la respuesta del servidor aquí (por ejemplo, verifica si el inicio de sesión fue exitoso)
-      console.log('Respuesta del servidor:', text);
-
       if (text === 'Autenticado') {
-        console.log("Autenticación correcta");
-        console.log(token);
+        console.log("Autenticación exitosa");
         return true;
       } else {
-        // Muestra un mensaje de error si el inicio de sesión falló
-        alert('Inicio de sesión fallido. Verifica tus credenciales.');
+        console.log("Autenticación fallida");
         return false;
       }
     })
     .catch((error) => {
-      // Maneja errores aquí (por ejemplo, muestra un mensaje de error)
       console.log('Error en la solicitud:', error);
-      alert('Autenticación fallida, hubo un error');
       return false;
     });
 };
