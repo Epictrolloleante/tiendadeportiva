@@ -5,22 +5,27 @@ const checkAuthorization = () => {
 
   if (!token) {
     // Si no hay token, no estás autenticado
-    return false;
+    return Promise.resolve(false);
   }
 
-  return axios
-    .get('http://serverreyes.ddns.net/api/user-only', {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
-    .then((response) => {
-      // Si la solicitud es exitosa, estás autenticado
-      console.log("Si esta autorizado: " + response)
-      return true;
+  return fetch('http://serverreyes.ddns.net:8000/api/user-only', {
+    method: 'GET',
+    headers: {
+      'Authorization': `Bearer ${token}`,
+    },
+  })
+    .then((response) => response.text())
+    .then((text) => {
+      if (text === 'Autenticado') {
+        console.log("Autenticación exitosa");
+        return true;
+      } else {
+        console.log("Autenticación fallida");
+        return false;
+      }
     })
     .catch((error) => {
-      // Si la solicitud devuelve un error (por ejemplo, 401 No autorizado), no estás autenticado
+      console.log('Error en la solicitud:', error);
       return false;
     });
 };

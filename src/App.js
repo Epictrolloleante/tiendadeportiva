@@ -11,7 +11,8 @@ import ComponenteDireccion from './pages/ComponenteDireccion';
 import ComponenteHome from './pages/ComponenteHome';
 import ComponentePaginaTest from './pages/ComponentePaginaTest'; 
 import ComponenteHombre from './pages/Hombre'; 
-import Pruebas from './pages/pruebas'
+import Pruebas from './pages/Pruebas'
+import ComponenteAgregarProducto from './pages/ComponenteAgregarProducto';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -21,6 +22,7 @@ function App() {
 
     <Routes>
       <Route path="/login" element={<ComponenteLogin />}>   </Route>
+      <Route path="/RegistroProducto" element={<ComponenteAgregarProducto />}>   </Route>
 
       <Route path='/Registro' element={<ComponenteRegistro/>}></Route>
       <Route path='/Direccion' element={<ComponenteDireccion/>}></Route>

@@ -1,73 +1,40 @@
-import React from 'react'
-import Auth from './auth';
-{/*
-function register() {
-  const data = {
-    name: 'John Doe',
-    email: 'user@example.com',
-    password: 'password123',
-    password_confirmation: 'password123', 
-  };
+import React, { useState, useEffect } from 'react';
+import Auth from './Auth';
 
-  fetch('http://serverreyes.ddns.net:8000/api/register', {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-    .then(response => response.json())
-    .then(data => {
-      // Maneja la respuesta del servidor aquí (por ejemplo, muestra un mensaje de éxito)
-      console.log('Registro exitoso', data);
-    })
-    .catch(error => {
-      // Maneja errores aquí (por ejemplo, muestra un mensaje de error)
-      console.error('Error en el registro', error);
-    });
-}*/}
-{/*
-function login() {
-  const data = {
-    name: 'John Doe',
-    email: 'user@example.com',
-    password: 'password123',
-    password_confirmation: 'password123', 
-  };
+function Pagina() {
+  const [isAuthenticated, setIsAuthenticated] = useState(null); // Usar null para indicar "cargando"
 
-  fetch('http://serverreyes.ddns.net:8000/api/register', {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-    .then(response => response.json())
-    .then(data => {
-      // Maneja la respuesta del servidor aquí (por ejemplo, muestra un mensaje de éxito)
-      console.log('Registro exitoso', data);
-    })
-    .catch(error => {
-      // Maneja errores aquí (por ejemplo, muestra un mensaje de error)
-      console.error('Error en el registro', error);
-    });
-}*/}
+  useEffect(() => {
+    Auth()
+      .then((isAuthenticated) => {
+        setIsAuthenticated(isAuthenticated);
+      })
+      .catch((error) => {
+        console.log('Error en la solicitud:', error);
+        setIsAuthenticated(false);
+      });
+  }, []);
 
-function pagina(){
-  if(Auth()) {
-    console.log(Auth());
-  return(
-    <div>
-      <h1>ESTA AUTENTICADO</h1>
-    </div>
-  );
-}else{
-  alert("Esta pagina solo puede ser accesada si esta logeado");
-  window.location.href = '/';
-}
+  if (isAuthenticated === null) {
+    // Si isAuthenticated es null, mostrar un indicador de carga
+    return (
+      <div>
+        <h1>Cargando...</h1>
+      </div>
+    );
+  } else if (isAuthenticated) {
+    // Si isAuthenticated es true, el usuario está autenticado
+    return (
+      <div>
+        <h1>ESTÁ AUTENTICADO</h1>
+      </div>
+    );
+  } else {
+    // Si isAuthenticated es false, el usuario no está autenticado
+    alert("Esta página solo puede ser accedida si está logeado");
+    window.location.href = '/';
+    return null; // O podrías renderizar un componente de acceso denegado
+  }
 }
 
-export default pagina;
-
+export default Pagina;
