@@ -11,7 +11,7 @@ import ComponenteDireccion from './pages/ComponenteDireccion';
 import ComponenteHome from './pages/ComponenteHome';
 import ComponentePaginaTest from './pages/ComponentePaginaTest'; 
 import ComponenteHombre from './pages/Hombre'; 
-import Pruebas from './pages/Pruebas'
+import Pruebas from './pages/pruebas'
 import ComponenteAgregarProducto from './pages/ComponenteAgregarProducto';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";

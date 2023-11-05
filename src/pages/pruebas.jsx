@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Auth from './Auth';
+import Auth from './auth';
 
 function Pagina() {
   const [isAuthenticated, setIsAuthenticated] = useState(null); // Usar null para indicar "cargando"
