@@ -2,6 +2,8 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20;
     background: #ccc;
+    display: flex;
+    align-items: center;
 }
 .contenedor{
     background: #62929E;

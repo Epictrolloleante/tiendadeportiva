@@ -8,7 +8,8 @@ export default function Header(props) {
             <div class="opc-menu">
                 <Link to={"/"}><p>Inicio</p></Link>
                 <Link to={'/Registro'}><p>Registro</p></Link>
-                <p>Carrito</p>
+                {props.Titulo !== 'Inicio de sesion' && <Link to={'/login'}><p>Inicio de Sesión</p></Link>}
+                {props.Titulo !== 'Home' && <Link to="/Carrito"><p>Carrito</p></Link>}
             </div>
         </div>
     )
