@@ -23,18 +23,19 @@
 .infoR{
     height: 70%;
     display: grid;
-    grid-template-columns: 20% 30% 15% 30%;
+    grid-template-columns: 20% 30% 20% 30%;
     overflow: hidden;
 }
 .infoR input{
     border-radius: 15px;
-    height: 55%;
+    height: 40%;
     width: 80%;
     margin: auto;
     margin-left: 0%;
 }
 .infoR p{
     margin-right: 10px;
+    margin-top: 30%;
     text-align: end;
 }
 .registro button{
