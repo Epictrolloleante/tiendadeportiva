@@ -17,7 +17,7 @@ export default function MenuPrincipal() {
 
   return (
     <ComponenteLayout Titulo="Home">
-      <div className="principal">
+      <div className="principal1">
         {categoriasData.map((categoria, index) => (
           <div className="cont" key={index}>
             <div className="bottom"></div>
@@ -30,6 +30,7 @@ export default function MenuPrincipal() {
             <div className="front"></div>
           </div>
         ))}
+        <br/>
       </div>
     </ComponenteLayout>
   );
