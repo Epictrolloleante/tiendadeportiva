@@ -8,7 +8,7 @@ const checkAuthorization = () => {
     return Promise.resolve(false);
   }
 
-  return fetch('http://serverreyes.ddns.net:8000/api/admin-only', {
+  return fetch('http://serverreyes.ddns.net:8000/api/user-only', {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${token}`,
@@ -16,8 +16,8 @@ const checkAuthorization = () => {
   })
     .then((response) => response.text())
     .then((text) => {
-      if (text === 'Autenticado como admin') {
-        console.log("Autenticación exitosa Admin");
+      if (text === 'Autenticado') {
+        console.log("Autenticación exitosa");
         return true;
       } else {
         console.log("Autenticación fallida");

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import stylees from '../css/MenuPrincipal.css';
+import styles from '../css/MenuPrincipal.css';
 
 import ComponenteLayout from './ComponenteLayout';
 
@@ -22,7 +22,7 @@ export default function MenuPrincipal() {
           <div className="cont" key={index}>
             <div className="bottom"></div>
             <div className="card">
-              <img src={categoria.imagen} alt={categoria.altimagen} />
+              <img src={'http://serverreyes.ddns.net:8000/storage/imagescat/'+categoria.imagen} alt={categoria.altimagen} />
               <br />
               <button>{categoria.nombre}</button>
             </div>
