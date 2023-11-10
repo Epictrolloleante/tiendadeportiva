@@ -13,7 +13,7 @@ export default function AgregarCategoria() {
   const [imagen, setimagen] = useState('');
   const [altImagen, setaltImagen] = useState('');
 
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(null);
 
   const formData = new FormData();
   formData.append('nombre', nombre);
@@ -49,30 +49,29 @@ export default function AgregarCategoria() {
     AuthAdmin()
       .then((isAuthenticated) => {
         setIsAuthenticated(isAuthenticated);
+        file.addEventListener('change', e => {
+          if (file.files && file.files[0]) {
+            const imagenURL = URL.createObjectURL(file.files[0]);
+            img.src = imagenURL;
+            setimagen(file.files[0]);
+          } else {
+            img.src = defaultFile;
+          }
+        });
       })
       .catch((error) => {
         console.log('Error en la solicitud:', error);
         setIsAuthenticated(false);
       });
-
-    file.addEventListener('change', e => {
-      if (file.files && file.files[0]) {
-        const imagenURL = URL.createObjectURL(file.files[0]);
-        img.src = imagenURL;
-        setimagen(file.files[0]);        
-      } else {
-        img.src = defaultFile;
-      }
-    });
   }, []); // El segundo argumento vacío [] indica que se ejecutará una vez después del montaje
 
-  if (!isAuthenticated) {
+  if (!isAuthenticated || isAuthenticated === null) {
     return (
       <div>
-        <h1>Cargando...</h1>
+        <h1>ACCESO DENEGADO</h1>
       </div>
     );
-  } else
+  } else if (isAuthenticated)
     return (
       <ComponenteLayout Titulo='Categoria'>
         <div className='fondoP'>
