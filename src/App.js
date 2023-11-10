@@ -25,12 +25,8 @@ function App() {
     <Routes>
       <Route path="/login" element={<ComponenteLogin />}>   </Route>
       <Route path="/RegistroProducto" element={<ComponenteAgregarProducto />}>   </Route>
-<<<<<<< HEAD
       <Route path='/RegistroTallas' element={<ComponenteTallas/>}></Route>
-=======
       <Route path="/AgregarCategoria" element={<AgregarCategoria />}>   </Route>
->>>>>>> 65e47ec13a065f56f4132cd61d9097217378fd1c
-
       <Route path='/Registro' element={<ComponenteRegistro/>}></Route>
       <Route path='/Direccion' element={<ComponenteDireccion/>}></Route>
       
