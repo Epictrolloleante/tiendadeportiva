@@ -17,6 +17,7 @@ import AgregarCategoria from './pages/AgregarCategoria';
 import Logout from './pages/logout'
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ComponenteTallas from './pages/ComponenteTallas';
 
 function App() {
   return (
@@ -26,7 +27,11 @@ function App() {
       <Route path="/login" element={<ComponenteLogin />}>   </Route>
       <Route path="/logout" element={<Logout />}>   </Route>
       <Route path="/RegistroProducto" element={<ComponenteAgregarProducto />}>   </Route>
+<<<<<<< HEAD
+      <Route path='/RegistroTallas' element={<ComponenteTallas/>}></Route>
+=======
       <Route path="/AgregarCategoria" element={<AgregarCategoria />}>   </Route>
+>>>>>>> 65e47ec13a065f56f4132cd61d9097217378fd1c
 
       <Route path='/Registro' element={<ComponenteRegistro/>}></Route>
       <Route path='/Direccion' element={<ComponenteDireccion/>}></Route>
