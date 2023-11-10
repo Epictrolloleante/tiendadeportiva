@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const checkAuthorization = () => {
+const Logout = () => {
   const token = localStorage.getItem('token');
 
   if (!token) {
@@ -8,7 +8,7 @@ const checkAuthorization = () => {
     return Promise.resolve(false);
   }
 
-  return fetch('http://serverreyes.ddns.net:8000/api/user-only', {
+  fetch('http://serverreyes.ddns.net:8000/api/logout', {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${token}`,
@@ -16,12 +16,11 @@ const checkAuthorization = () => {
   })
     .then((response) => response.text())
     .then((text) => {
-      if (text === 'Autenticado') {
-        console.log("Autenticación exitosa");
-        return true;
+      if (text === 'Sesion Cerrada') {
+        console.log("Sesion Cerrada");
+        window.location.href = '/';                        
       } else {
-        console.log("Autenticación fallida");
-        return false;
+        window.location.href = '/';
       }
     })
     .catch((error) => {
@@ -30,4 +29,4 @@ const checkAuthorization = () => {
     });
 };
 
-export default checkAuthorization;
+export default Logout;
