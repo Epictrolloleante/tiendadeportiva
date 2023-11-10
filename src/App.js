@@ -14,6 +14,7 @@ import ComponenteHombre from './pages/Hombre';
 import Pruebas from './pages/pruebas'
 import ComponenteAgregarProducto from './pages/ComponenteAgregarProducto';
 import AgregarCategoria from './pages/AgregarCategoria';
+import Logout from './pages/logout'
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ComponenteTallas from './pages/ComponenteTallas';
@@ -24,6 +25,7 @@ function App() {
 
     <Routes>
       <Route path="/login" element={<ComponenteLogin />}>   </Route>
+      <Route path="/logout" element={<Logout />}>   </Route>
       <Route path="/RegistroProducto" element={<ComponenteAgregarProducto />}>   </Route>
       <Route path='/RegistroTallas' element={<ComponenteTallas/>}></Route>
       <Route path="/AgregarCategoria" element={<AgregarCategoria />}>   </Route>
