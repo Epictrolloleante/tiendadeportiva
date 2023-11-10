@@ -1,0 +1,77 @@
+.fondoP {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20;
+    background: #ccc;
+    padding: 50px;
+}
+.contenedor{
+    background: #62929E;
+    border-radius: 35px;
+    border: 5px solid black;
+    margin: auto;
+}
+.registro{
+    background: #393D3F;
+    margin: auto;
+    width: 90%;
+    height: 80%;
+    border-radius: 35px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+.infoR{
+    height: 70%;
+    display: grid;
+    grid-template-columns: 20% 30% 20% 30%;
+    overflow: hidden;
+}
+.infoR input{
+    border-radius: 15px;
+    height: 40%;
+    width: 80%;
+    margin: auto;
+    margin-left: 0%;
+}
+.infoR p{
+    margin-right: 10px;
+    margin-top: 30%;
+    text-align: end;
+}
+.registro button{
+    height: 10%;
+}
+.infoR img{
+    width: 180px;
+    height: 110px;
+    margin-left: 0px;
+    object-fit: cover;
+ }
+ .custom-file-upload {
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin: 40px;
+    padding: 10px;
+    border-radius: 12px;
+    background: #62929E;
+    width: 90px;
+    height: 30px;
+  }
+.custom-file-upload::after {
+    content: 'Seleccionar Imagen'; /* Texto en el botón */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Estilo para el input de tipo "file" oculto */
+  .hidden-file-input {
+    display: none;
+  }
