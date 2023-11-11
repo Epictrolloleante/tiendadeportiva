@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Auth from './auth';
+import Auth from './Auth.jsx';
 import styles from '../css/Header.css';
 import { Link } from 'react-router-dom';
 export default function Header(props) {
