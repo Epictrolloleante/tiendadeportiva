@@ -19,20 +19,20 @@
     color: white;
     text-align: center;
 }
-.Direcciondireccion button{
-    height: 10%;
+.Direccioninfo form button{
+    height: 80%;
 }
-.Direccioninfo{
+.Direccioninfo form{
     height: 70%;
     display: grid;
     grid-template-columns: 20% 30% 15% 30%;
 }
-.Direccioninfo input{
+.Direccioninfo form input{
     border-radius: 15px;
     height: 80%;
     width: 80%;
 }
-.Direccioninfo p{
+.Direccioninfo form p{
     margin-right: 10px;
     text-align: end;
 }

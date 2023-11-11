@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 
-import Auth from './auth';
+import Auth from './Auth.jsx';
 import styles from '../css/ComponenteRegistro.css';
 import ComponenteLayout from './ComponenteLayout';
 
