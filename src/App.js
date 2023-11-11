@@ -19,6 +19,8 @@ import Logout from './pages/logout'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ComponenteTallas from './pages/ComponenteTallas';
 
+import ComponenteAdminCategoria from './pages/ComponenteAdminCategoria'
+
 function App() {
   return (
     <BrowserRouter>
@@ -36,6 +38,8 @@ function App() {
       <Route path='/apartadoHombres' element={<ComponenteHombre/>}></Route>
       <Route path="/pruebas" element={<Pruebas />}>   </Route>
       <Route path="/" element={<MenuPrincipal />}>   </Route>
+
+      <Route path="/ComponenteAdminCategoria" element={<ComponenteAdminCategoria />}>   </Route>
 
       
     </Routes>
