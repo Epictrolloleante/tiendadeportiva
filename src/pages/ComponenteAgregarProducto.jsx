@@ -4,10 +4,6 @@ import styles from '../css/ComponenteAgregarProducto.css';
 import ComponenteLayout from './ComponenteLayout';
 
 export default function ComponenteAgregarProducto() {
-  useEffect(() => {
-    const file = document.getElementById('file-input');
-    const img = document.getElementById('imagen');
-    const defaultFile = 'https://ingeniosas.org/wp-content/plugins/bb-plugin/img/no-image.png';
 
     file.addEventListener('change', e => {
       if (e.target.files[0]) {
