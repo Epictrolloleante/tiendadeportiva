@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../css/MenuPrincipal.css';
+import { Link } from 'react-router-dom';
 
 import ComponenteLayout from './ComponenteLayout';
 
@@ -22,15 +23,17 @@ export default function MenuPrincipal() {
           <div className="cont" key={index}>
             <div className="bottom"></div>
             <div className="card">
-              <img src={'http://serverreyes.ddns.net:8000/storage/imagescat/'+categoria.imagen} alt={categoria.altimagen} />
+              <img src={'http://serverreyes.ddns.net:8000/storage/imagescat/' + categoria.imagen} alt={categoria.altimagen} />
               <br />
-              <button>{categoria.nombre}</button>
+              <Link to={'/Productos/'+categoria.id}>
+                <button>{categoria.nombre}</button>
+              </Link>
             </div>
             <div className="left"></div>
             <div className="front"></div>
           </div>
         ))}
-        <br/>
+        <br />
       </div>
     </ComponenteLayout>
   );

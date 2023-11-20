@@ -19,7 +19,8 @@ import Logout from './pages/logout'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ComponenteTallas from './pages/ComponenteTallas';
 
-import ComponenteAdminCategoria from './pages/ComponenteAdminCategoria'
+import ComponenteAdminCategoria from './pages/ComponenteAdminCategoria';
+import Productos from './pages/Productos';
 
 function App() {
   return (
@@ -40,6 +41,8 @@ function App() {
       <Route path="/" element={<MenuPrincipal />}>   </Route>
 
       <Route path="/ComponenteAdminCategoria" element={<ComponenteAdminCategoria />}>   </Route>
+
+      <Route path='/Productos/:categoriaID' element={<Productos/>}></Route>
 
       
     </Routes>
