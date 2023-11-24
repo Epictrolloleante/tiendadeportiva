@@ -1,7 +1,8 @@
-.principal {
+.AgregarP_principal {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20;
     background: #ccc;
+    padding: 50px;
 }
 .contenedor{
     background: #62929E;
@@ -9,7 +10,7 @@
     border: 5px solid black;
     margin: auto;
 }
-.registro{
+.AgregarP_registro{
     background: #393D3F;
     margin: auto;
     width: 90%;
@@ -20,44 +21,47 @@
     text-align: center;
 }
 
-.infoR{
+.AgregarP_infoR{
     height: 70%;
     display: grid;
-    grid-template-columns: 20% 30% 15% 30%;
+    grid-template-columns: 20% 30% 20% 30%;
     overflow: hidden;
+    align-items: center;
 }
 
-.infoR input{
+.AgregarP_infoR input{
+    border-radius: 15px;
+    height: 50%;
+    width: 80%;
+    margin: auto;
+    margin-left: 0%;
+}
+.AgregarP_infoR select{
     border-radius: 15px;
     height: 50%;
     width: 80%;
 }
-.infoR select{
-    border-radius: 15px;
-    height: 50%;
-    width: 80%;
-}
-.infoR p{
+.AgregarP_infoR p{
     margin-right: 10px;
     text-align: end;
 }
 
-.infoR textarea{
+.AgregarP_infoR textarea{
    width: 230px;
    height: 110px;
 }
-.registro button{
+.AgregarP_infoR button{
     height: 10%;
 }
 
-.infoR img{
+.AgregarP_infoR img{
     width: 180px;
     height: 110px;
-    margin-left: 50px;
+    margin-left: 0px;
     object-fit: cover;
  }
 
-.custom-file-upload {
+.custom-file-upload_AgregarProducto {
     display: inline-block;
     color: #fff;
     cursor: pointer;
@@ -68,10 +72,10 @@
     border-radius: 12px;
     background: #62929E;
     width: 90px;
-    height: 30px;
+    height: 40px;
   }
-.custom-file-upload::after {
-    content: 'Seleccionar Imagen'; /* Texto en el botón */
+.custom-file-upload_AgregarProducto::after {
+    content: 'Seleccionar Imagen Principal'; /* Texto en el botón */
     position: absolute;
     top: 0;
     left: 0;

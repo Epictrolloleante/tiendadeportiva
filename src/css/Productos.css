@@ -15,6 +15,7 @@
     overflow: hidden;
     margin: 10px;
     width: 90%;
+    height: 300px;
     display: flex;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -38,7 +39,7 @@
 }
 .Productos_product img {
     width: 50%;
-    height: auto;
+    height: 90%;
     border-bottom: 1px solid #393d3f;
     border-radius: 8px 8px 0 0;
 }

@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import ComponenteLayout from './ComponenteLayout';
 import styles from '../css/Productos.css';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';/*Importacion para el useParams*/
 
 export default function Productos(props) {
 
-    const { categoriaID } = useParams();
+    const { categoriaID } = useParams();/*Se ocupa para extraer parametros de la url la 
+                                            variable dentro debe ser llamada como esta puesto en el
+                                            App.js en el link que se le asigno*/
     const [productosData, setProductosData] = useState([]);
     const [imagenData, setImagenData] = useState([]);    
 
@@ -24,6 +26,7 @@ export default function Productos(props) {
 
     const productosFiltrados = categoriaID
     ? productosData.filter((producto) => producto.category_id == categoriaID)
+                    /*Al comparar con algo la variable se debe de ocupar 2 = porque si no genera errores*/
     : productosData;
 
     const obtenerImagen = (idProducto) => {
@@ -40,7 +43,7 @@ export default function Productos(props) {
                 <div className='Productos_contenedor'>
                     {productosFiltrados.map((producto, index) => (
                         <div className="Productos_product" key={index}>
-                            <img src={'http://serverreyes.ddns.net:8000/storage/imagescat/'+obtenerImagen(producto.id)} alt='a' />
+                            <img src={'http://serverreyes.ddns.net:8000/storage/images/'+obtenerImagen(producto.id)} alt='a' />
                             <div className="Productos_info">
                                 <h5>{producto.nombre}</h5>
                                 <p>{producto.descripcion}</p>

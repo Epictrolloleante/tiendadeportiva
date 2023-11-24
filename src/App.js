@@ -21,6 +21,7 @@ import ComponenteTallas from './pages/ComponenteTallas';
 
 import ComponenteAdminCategoria from './pages/ComponenteAdminCategoria';
 import Productos from './pages/Productos';
+import ComponenteAdminProductos from './pages/ComponenteAdminProductos';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
       <Route path="/" element={<MenuPrincipal />}>   </Route>
 
       <Route path="/ComponenteAdminCategoria" element={<ComponenteAdminCategoria />}>   </Route>
+      <Route path="/ComponenteAdminProductos" element={<ComponenteAdminProductos />}>   </Route>
 
       <Route path='/Productos/:categoriaID' element={<Productos/>}></Route>
 
