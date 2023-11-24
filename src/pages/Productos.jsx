@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ComponenteLayout from './ComponenteLayout';
 import styles from '../css/Productos.css';
 import { useParams } from 'react-router-dom';/*Importacion para el useParams*/
+import Auth from './auth';
 
 export default function Productos(props) {
 
@@ -9,7 +10,19 @@ export default function Productos(props) {
                                             variable dentro debe ser llamada como esta puesto en el
                                             App.js en el link que se le asigno*/
     const [productosData, setProductosData] = useState([]);
-    const [imagenData, setImagenData] = useState([]);    
+    const [imagenData, setImagenData] = useState([]); 
+    const [isAuthenticated, setIsAuthenticated] = useState(null);
+    
+    useEffect(() => {
+        Auth()
+            .then((isAuthenticated) => {
+                setIsAuthenticated(isAuthenticated);
+            })
+            .catch((error) => {
+                console.log('Error en la solicitud:', error);
+                setIsAuthenticated(false);
+            });
+    }, []);
 
     console.log(categoriaID);
     useEffect(() => {
@@ -37,6 +50,21 @@ export default function Productos(props) {
 
     console.log(productosFiltrados);
 
+
+    if (isAuthenticated === null) {
+        return (
+            <div>
+                <h1>Cargando...</h1>
+            </div>
+        );
+    }
+    else if (!isAuthenticated) {
+        return (
+            <div>
+                <h1>ACCESO DENEGADO</h1>
+            </div>
+        );
+    } else
     return (
         <ComponenteLayout Titulo="Productos">
             <div className="Productos_Principal">

@@ -113,7 +113,7 @@ const DataTable = () => {
         );
     } else
         return (
-            <ComponenteLayout Titulo='Categorias'>
+            <ComponenteLayout Titulo='Productos'>
                 <div className="categoria_Principal">
                     <Link to={"/RegistroProducto"}><button className='agregar'>Agregar Producto</button></Link>
                     <div className='categoria_Contenedor'>
