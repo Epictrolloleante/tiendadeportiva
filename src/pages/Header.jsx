@@ -45,7 +45,7 @@ export default function Header(props) {
                     <div><Link to={'/Login'}><p>Login</p></Link></div>
                 )}
                 {isAdmin ? (props.Titulo !== 'Categorias' && <Link to={'/ComponenteAdminCategoria'}><p>Categorias</p></Link>) : (<></>)}
-                {props.Titulo !== 'Home' && props.Titulo !== 'Inicio de sesion' && <Link to="/Carrito"><p>Carrito</p></Link>}
+                {props.Titulo !== 'Home' && props.Titulo !== 'Inicio de sesion' && <Link to='/CarroDeCompras'><p>Carrito</p></Link>}
             </div>
         </div>
     )

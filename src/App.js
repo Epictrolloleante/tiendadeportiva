@@ -22,12 +22,16 @@ import ComponenteTallas from './pages/ComponenteTallas';
 import ComponenteAdminCategoria from './pages/ComponenteAdminCategoria';
 import Productos from './pages/Productos';
 import ComponenteAdminProductos from './pages/ComponenteAdminProductos';
+import CarroDeCompras from './pages/CarroDeCompras';
+
+
 
 function App() {
   return (
     <BrowserRouter>
 
     <Routes>
+    <Route path="/CarroDeCompras" element={<CarroDeCompras />}>   </Route>
       <Route path="/login" element={<ComponenteLogin />}>   </Route>
       <Route path="/logout" element={<Logout />}>   </Route>
       <Route path="/RegistroProducto" element={<ComponenteAgregarProducto />}>   </Route>
@@ -48,6 +52,7 @@ function App() {
 
       
     </Routes>
+    
   </BrowserRouter>
 
   );

@@ -1,4 +1,3 @@
-import axios from 'axios';
 
 const Logout = () => {
   const token = localStorage.getItem('token');

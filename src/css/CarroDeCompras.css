@@ -1,0 +1,73 @@
+.carro-de-compras-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Añadido para centrar horizontalmente */
+    background: #ccc;
+  }
+  .footer{
+    background: #ccc;
+    margin: 0px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* Alinea verticalmente */
+    justify-content: center; /* Alinea horizontalmente */
+  }
+  
+  .producto-carrito {
+    border: 1px solid white;
+    margin: 15px;
+    padding: 10px;
+    width: 650px;
+    display: flex;
+    /* Añadido para centrar verticalmente */
+    align-items: center;
+    background: white;
+  }
+  
+  
+  .imagen-container {
+    margin-right: 10px;
+  }
+  
+  .imagen-container img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+  
+  .buton-container{
+    
+    display: grid;
+    place-items: center;
+  }
+  .botonElimina{
+    width: 100px;
+  }
+
+  .info-container {
+    flex-grow: 1;
+    background: white;
+    padding: 10px;
+  }
+  
+  .nombre-producto {
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 1px;
+  }
+  
+  .descripcion-producto {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .cantidad, .precio {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .botones{
+    display: flex;
+  }
+
+  /* Puedes seguir agregando más estilos según tus preferencias */
+  
