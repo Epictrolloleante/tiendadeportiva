@@ -2,10 +2,12 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../css/ComponenteAgregarProducto.css';
 import ComponenteLayout from './ComponenteLayout';
+import AuthAdmin from './authAdmin';
 
 export default function ComponenteAgregarProducto() {
   const token = localStorage.getItem('token');
   const [formReset, setFormReset] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(null);
 
   const [categoriasData, setCategoriasData] = useState([]);
   const [imagenPrincipal, setImagenPrincipal] = useState('');
@@ -25,6 +27,17 @@ export default function ComponenteAgregarProducto() {
   };
 
   const valores = Object.values(data).every((valor) => !!valor);
+
+  useEffect(() => {
+    AuthAdmin()
+      .then((isAuthenticated) => {
+        setIsAuthenticated(isAuthenticated);
+      })
+      .catch((error) => {
+        console.log('Error en la solicitud:', error);
+        setIsAuthenticated(false);
+      });
+  }, []);
 
   useEffect(() => {
     // Realiza la solicitud para obtener los datos de categorías
@@ -134,36 +147,50 @@ export default function ComponenteAgregarProducto() {
   }, [formReset]);
 
 
-  return (
-    <ComponenteLayout Titulo='Registro'>
-      <div class='AgregarP_principal'>
-        <div class='contenedor'>
-          <div class='AgregarP_registro'>
-            <h3>REGISTRO DE PRODUCTOS</h3>
-            <div class='AgregarP_infoR'>
-              <p>Producto:</p> <input onChange={handleNombreChange} type='text' placeholder='Introduce el nombre del producto'></input>
-              <p>Precio:</p> <input onChange={handlePrecioChange} type='number' placeholder='Introduce el precio'></input>
-              <p>Descripccion:</p><textarea onChange={handleDescripcionChange} name="Descripccion" id="Descripccion"></textarea>
-              <label for="file-input" class="custom-file-upload_AgregarProducto"></label>
-              <input type="file" id="file-input" class="hidden-file-input" onChange={handleFileChange} />
-              <img id='imagen' src='https://ingeniosas.org/wp-content/plugins/bb-plugin/img/no-image.png'></img>
-              <p>Categoria:</p> <select value={idCategoria} onChange={handleIdCategoriaChange} placeholder='Categoria'>
-                <option value="" disabled>Selecciona una categoría</option>
-                {categoriasData.map((categoria) => (
-                  <option value={categoria.id}>
-                    {categoria.nombre}
-                  </option>
-                ))}
-              </select>
-              <p>Conjunto de Imagenes:</p>
-              <input onChange={handleArvhivosChange} type="file" multiple accept='image/*' />
+  if (isAuthenticated === null) {
+    return (
+      <div>
+        <h1>Cargando...</h1>
+      </div>
+    );
+  }
+  else if (!isAuthenticated) {
+    return (
+      <div>
+        <h1>ACCESO DENEGADO</h1>
+      </div>
+    );
+  } else
+    return (
+      <ComponenteLayout Titulo='Registro'>
+        <div class='AgregarP_principal'>
+          <div class='contenedor'>
+            <div class='AgregarP_registro'>
+              <h3>REGISTRO DE PRODUCTOS</h3>
+              <div class='AgregarP_infoR'>
+                <p>Producto:</p> <input onChange={handleNombreChange} type='text' placeholder='Introduce el nombre del producto'></input>
+                <p>Precio:</p> <input onChange={handlePrecioChange} type='number' placeholder='Introduce el precio'></input>
+                <p>Descripccion:</p><textarea onChange={handleDescripcionChange} name="Descripccion" id="Descripccion"></textarea>
+                <label for="file-input" class="custom-file-upload_AgregarProducto"></label>
+                <input type="file" id="file-input" class="hidden-file-input" onChange={handleFileChange} />
+                <img id='imagen' src='https://ingeniosas.org/wp-content/plugins/bb-plugin/img/no-image.png'></img>
+                <p>Categoria:</p> <select value={idCategoria} onChange={handleIdCategoriaChange} placeholder='Categoria'>
+                  <option value="" disabled>Selecciona una categoría</option>
+                  {categoriasData.map((categoria) => (
+                    <option value={categoria.id}>
+                      {categoria.nombre}
+                    </option>
+                  ))}
+                </select>
+                <p>Conjunto de Imagenes:</p>
+                <input onChange={handleArvhivosChange} type="file" multiple accept='image/*' />
+              </div>
+              <button onClick={handleSubmit}>Registrar</button>
             </div>
-            <button onClick={handleSubmit}>Registrar</button>
           </div>
         </div>
-      </div>
-    </ComponenteLayout>
-  );
+      </ComponenteLayout>
+    );
 }
 
 
