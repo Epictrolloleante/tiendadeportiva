@@ -1,0 +1,65 @@
+.producto_Principal {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20;
+    background: #ccc;
+    padding: 50px;
+}
+
+.producto_Contenedor {
+    background: #62929E;
+    border-radius: 35px;
+    border: 5px solid black;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50% 10% 40%;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.producto_Contenedor button{
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.producto_tabla {
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.producto_tabla th,
+.producto_tabla td {
+    
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.producto_tabla img{
+    height: 150px;
+    width: 150px;
+}
+
+.producto_tabla th {
+    background-color: #5ab38d;
+    color: white;
+}
+
+.producto_tabla tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.modal{
+    background: #393d3f;
+    border-radius: 35px;
+    border: 5px solid black;
+    margin: auto;  
+    color: #ccc;  
+}
+.close{
+    width: 20%;
+    margin-top: auto;
+}
+.agregar{
+    margin: 5px;
+}

@@ -49,8 +49,7 @@ export default function Header(props) {
                 
                 
                 
-                {isAuthenticated ? (props.Titulo !== 'Inicio de sesion' && <Link to="/Carrito"><p>Carrito</p></Link>) : (<></>)}
-                {props.Titulo !== 'Home' && props.Titulo !== 'Inicio de sesion' && <Link to='/CarroDeCompras'><p>Carrito</p></Link>}
+                {isAuthenticated ? (props.Titulo !== 'Inicio de sesion' && <Link to="/CarroDeCompras"><p>Carrito</p></Link>) : (<></>)}                
             </div>
         </div>
     )

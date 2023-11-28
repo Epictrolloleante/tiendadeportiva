@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import AuthAdmin from './authAdmin';
 import ComponenteLayout from './ComponenteLayout';
-import styles from '../css/ComponenteAdminCategoria.css';
+import styles from '../css/ComponenteAdminProducto.css';
 import { Link } from 'react-router-dom';
 
 const DataTable = () => {
@@ -114,13 +114,13 @@ const DataTable = () => {
     } else
         return (
             <ComponenteLayout Titulo='Productos'>
-                <div className="categoria_Principal">
+                <div className="producto_Principal">
                     <Link to={"/RegistroProducto"}><button className='agregar'>Agregar Producto</button></Link>
-                    <div className='categoria_Contenedor'>
+                    <div className='producto_Contenedor'>
 
                         
 
-                        <table className="categoria_tabla">
+                        <table className="producto_tabla">
                             <thead>
                                 <tr>
                                     <th>Producto</th>
