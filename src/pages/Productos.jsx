@@ -40,7 +40,13 @@ export default function Productos(props) {
         },
       });
 
-      const productoEnCarrito = carritoResponse.data.items.find(item => item.VarianteId === idProducto);
+      const varianteResponse = await axios.get('http://serverreyes.ddns.net:8000/api/variantes', {
+        headers: {},
+      });
+
+      const idVariente = varianteResponse.data.find(item => item.product_id === idProducto);
+
+      const productoEnCarrito = carritoResponse.data.items.find(item => item.VarianteId === idVariente.id);
 
       if (productoEnCarrito) {
         const response = await axios.put(
@@ -51,8 +57,8 @@ export default function Productos(props) {
       } else {
         const response = await axios.post(
           `http://serverreyes.ddns.net:8000/api/carrito`,
-          { VarianteId: idProducto, cantidad: 1 },
-          { headers: { 'Accept': 'application/json', 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` } }
+          { ProductId: idProducto, cantidad: 1 },
+          { headers: { 'Accept': 'application/json', 'Authorization': `Bearer ${token}` } }
         );
       }
 
@@ -70,7 +76,7 @@ export default function Productos(props) {
       } else if (error.request) {
         alert('Error: No se recibió respuesta del servidor');
       } else {
-        alert('Error al agregar el producto al carrito');
+        alert('Error al agregar el producto al carrito', error);
       }
     }
   };
@@ -81,7 +87,7 @@ export default function Productos(props) {
         <div className='Productos_contenedor'>
           {productosFiltrados.map((producto) => (
             <div className="Productos_product" key={producto.id}>
-              <img src={'http://serverreyes.ddns.net:8000/storage/images/'+obtenerImagen(producto.id)} alt='a' />
+              <img src={'http://serverreyes.ddns.net:8000/storage/images/' + obtenerImagen(producto.id)} alt='a' />
               <div className="Productos_info">
                 <h5>{producto.nombre}</h5>
                 <p>{producto.descripcion}</p>
